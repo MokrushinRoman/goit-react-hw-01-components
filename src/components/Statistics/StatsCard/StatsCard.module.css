@@ -1,0 +1,17 @@
+.item {
+  width: calc(100% / 5);
+  padding: 10px 0;
+
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.percentage,
+.label {
+  color: #ffffff;
+}
+
+.percentage {
+  margin-top: 10px;
+
+  font-size: 25px;
+}
