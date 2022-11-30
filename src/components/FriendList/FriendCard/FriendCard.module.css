@@ -1,0 +1,48 @@
+.friendCard {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+.friendCard + .friendCard {
+  margin-top: 10px;
+}
+.friendCard > {
+  margin-left: 15px;
+}
+.friendCard > * {
+  margin-left: 10px;
+}
+
+.online,
+.offline {
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+}
+
+.online {
+  background-color: rgb(21, 172, 21);
+}
+.offline {
+  background-color: rgb(230, 23, 23);
+}
+
+.avatar {
+  width: 100px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  background-color: rgba(147, 134, 246, 0.11);
+}
+
+.name {
+  font-weight: 600;
+  font-size: 25px;
+}
