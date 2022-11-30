@@ -6,18 +6,11 @@ import { FriendCard } from './FriendCard/FriendCard';
 
 export const FriendList = ({ friendsData }) => {
   return (
-    <div>
-      <ul className={css.friendList}>
-        {friendsData.map(({ avatar, name, isOnline, id }) => (
-          <FriendCard
-            key={id}
-            avatar={avatar}
-            name={name}
-            isOnline={isOnline}
-          />
-        ))}
-      </ul>
-    </div>
+    <ul className={css.friendList}>
+      {friendsData.map(({ avatar, name, isOnline, id }) => (
+        <FriendCard key={id} avatar={avatar} name={name} isOnline={isOnline} />
+      ))}
+    </ul>
   );
 };
 

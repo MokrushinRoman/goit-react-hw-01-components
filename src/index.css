@@ -52,10 +52,10 @@ img {
   display: block;
 }
 
-#root > div + div {
+/* #root > div + div {
   margin-top: 80px;
 }
 #root {
   margin-top: 80px;
   margin-bottom: 80px;
-}
+} */
