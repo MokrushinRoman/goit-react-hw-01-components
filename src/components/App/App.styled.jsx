@@ -6,9 +6,8 @@ export const Container = styled.div`
   & > * {
     margin-inline: auto;
   }
-`;
 
-/* 
   & > *:not(:first-child) {
     margin-top: 80px;
-  } */
+  }
+`;
