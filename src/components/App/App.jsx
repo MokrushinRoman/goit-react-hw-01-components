@@ -1,3 +1,5 @@
+import { Container } from './App.styled';
+
 import data from 'base/data.json';
 import friendsData from 'base/friends.json';
 import transactionsData from 'base/transactions.json';
@@ -10,13 +12,13 @@ import { TransactionHistory } from '../TransactionHistory/TransactionHistory';
 
 export const App = () => {
   return (
-    <>
+    <Container>
       <Profile profileData={profileData} />
 
       <Statistics data={data} />
       <FriendList friendsData={friendsData} />
 
       <TransactionHistory operations={transactionsData} />
-    </>
+    </Container>
   );
 };
