@@ -8,7 +8,7 @@ import { Statistics } from '../Statistics/Statistics';
 import { FriendList } from '../FriendList/FriendList';
 import { TransactionHistory } from '../TransactionHistory/TransactionHistory';
 
-import { Container } from './App.styled';
+import { Container } from './App.styled.js';
 
 export const App = () => {
   return (
