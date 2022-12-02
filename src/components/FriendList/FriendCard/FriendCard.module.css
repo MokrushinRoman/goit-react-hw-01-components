@@ -11,9 +11,6 @@
 .friendCard + .friendCard {
   margin-top: 10px;
 }
-.friendCard > {
-  margin-left: 15px;
-}
 .friendCard > * {
   margin-left: 10px;
 }

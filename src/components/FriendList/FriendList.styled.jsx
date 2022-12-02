@@ -1,0 +1,13 @@
+import styled from '@emotion/styled';
+
+export const List = styled.ul`
+  width: 300px;
+  padding: 10px;
+
+  background-color: #ffffff;
+
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+`;
