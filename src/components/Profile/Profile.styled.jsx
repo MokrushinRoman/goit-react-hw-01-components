@@ -10,9 +10,7 @@ export const Card = styled.div`
     return theme.borderRadius;
   }};
 
-  box-shadow: ${({ theme }) => {
-    return theme.boxShadow;
-  }};
+  box-shadow: ${({ theme }) => theme.boxShadow};
 `;
 
 export const UserDescription = styled.div`
@@ -33,7 +31,7 @@ export const UserDescription = styled.div`
 
 export const Avatar = styled.img`
   border-radius: 50%;
-  background-color: tan;
+  background-color: ${p => p.theme.colors.background};
 `;
 
 export const DescriptionList = styled.ul`
@@ -73,9 +71,7 @@ export const UserStat = styled.li`
   text-align: center;
 
   background-color: rgba(147, 134, 246, 0.11);
-  color: ${({ theme }) => {
-    return theme.colors.gray;
-  }}; ;
+  color: ${({ theme }) => theme.colors.gray};
 `;
 
 export const Label = styled.span`

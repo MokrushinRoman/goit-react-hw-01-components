@@ -16,7 +16,7 @@ export const TransactionHistory = ({ operations }) => {
       <tbody className={css.tableBody}>
         {operations.map(({ id, type, amount, currency }) => (
           <tr key={id} className={css.tableBodyRow}>
-            <td>{type}</td>
+            <td>{type.charAt(0).toUpperCase() + type.slice(1)}</td>
             <td>{amount} </td>
             <td>{currency} </td>
           </tr>
