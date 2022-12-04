@@ -6,3 +6,60 @@
 
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
 }
+
+/*  */
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 20px;
+}
+
+.avatar {
+  border-radius: 50%;
+  background-color: tan;
+}
+
+.userInfo {
+  margin: 20px 0;
+
+  text-align: center;
+}
+.userInfo > li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.tag,
+.location {
+  color: rgb(170, 163, 163);
+}
+
+/*  */
+.stats {
+  display: flex;
+  width: 100%;
+}
+
+.stat {
+  width: calc(100% / 3);
+  padding: 10px 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+
+  text-align: center;
+
+  background-color: rgba(147, 134, 246, 0.11);
+}
+
+.label {
+  color: rgb(170, 163, 163);
+}
+
+.quantity {
+  font-weight: 600;
+}

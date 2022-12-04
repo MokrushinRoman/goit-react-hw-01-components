@@ -39,7 +39,8 @@ export const Badge = styled.div`
   height: 20px;
 
   border-radius: 50%;
-  background-color: ${({ isOnline }) => {
-    return isOnline ? 'rgb(21, 172, 21)' : 'rgb(230, 23, 23)';
-  }};
+  background-color: ${setBadgeBgColor};
 `;
+function setBadgeBgColor({ isOnline }) {
+  return isOnline ? 'rgb(21, 172, 21)' : 'rgb(230, 23, 23)';
+}
