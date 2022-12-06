@@ -13,10 +13,10 @@ import {
 // import { PageTitle } from './PageTitle/PageTitle';
 // import { StatsList } from './StatsList/StatsList';
 
-export const Statistics = ({ data, title = 'upload data' }) => {
+export const Statistics = ({ data, title }) => {
   return (
     <StatisticsCard>
-      <StatsTitle title="upload data">{title.toUpperCase()}</StatsTitle>
+      <StatsTitle>{title && title.toUpperCase()}</StatsTitle>
       <StatsList data={data}>
         {data.map(({ label, percentage, id }) => (
           <StatsItem key={id}>

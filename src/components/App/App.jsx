@@ -13,9 +13,15 @@ import { Container } from './App.styled';
 export const App = () => {
   return (
     <Container>
-      <Profile profileData={profileData} />
+      <Profile
+        username={profileData.username}
+        tag={profileData.tag}
+        location={profileData.location}
+        avatar={profileData.avatar}
+        stats={profileData.stats}
+      />
 
-      <Statistics data={data} />
+      <Statistics data={data} title="upload data" />
       <FriendList friendsData={friendsData} />
 
       <TransactionHistory operations={transactionsData} />

@@ -14,9 +14,13 @@ import {
   Label,
 } from './Profile.styled';
 
-export function Profile({ profileData }) {
-  const { username, tag, location, avatar, stats } = profileData;
-
+export function Profile({
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, likes, views },
+}) {
   return (
     <Card>
       <UserDescription>
@@ -31,32 +35,34 @@ export function Profile({ profileData }) {
       </UserDescription>
 
       <UserStatsList>
-        {Object.entries(stats).map(([stat, value]) => {
-          return (
-            <UserStat key={stat + value}>
-              <Label>{stat.charAt(0).toUpperCase() + stat.slice(1)}</Label>
-              <Quantity>{value}</Quantity>
-            </UserStat>
-          );
-        })}
+        <UserStat>
+          <Label>Followers</Label>
+          <Quantity>{followers}</Quantity>
+        </UserStat>
+        <UserStat>
+          <Label>Views</Label>
+          <Quantity>{views}</Quantity>
+        </UserStat>
+        <UserStat>
+          <Label>Likes</Label>
+          <Quantity>{likes}</Quantity>
+        </UserStat>
       </UserStatsList>
     </Card>
   );
 }
 
-Profile.propTypes = {
-  profileData: PropTypes.exact({
-    username: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    stats: PropTypes.exact({
-      followers: PropTypes.number.isRequired,
-      views: PropTypes.number.isRequired,
-      likes: PropTypes.number.isRequired,
-    }).isRequired,
-  }).isRequired,
-};
+// Profile.propTypes = {
+//   username: PropTypes.string.isRequired,
+//   tag: PropTypes.string.isRequired,
+//   location: PropTypes.string.isRequired,
+//   avatar: PropTypes.string.isRequired,
+//   stats: PropTypes.exact({
+//     followers: PropTypes.number.isRequired,
+//     views: PropTypes.number.isRequired,
+//     likes: PropTypes.number.isRequired,
+//   }).isRequired,
+// };
 
 /* <div className={css.profile}>
       <div className={css.description}>
@@ -86,3 +92,20 @@ Profile.propTypes = {
         })}
       </ul>
     </div>*/
+
+/*
+    
+        {Object.entries(stats).map(([stat, value]) => {
+          return (
+            <UserStat key={stat + value}>
+              <Label>{stat.charAt(0).toUpperCase() + stat.slice(1)}</Label>
+              <Quantity>{value}</Quantity>
+            </UserStat>
+          );
+        })}
+    */
+
+/*
+        {Object.keys(followers).charAt(0).toUpperCase() +
+              Object.keys(followers).slice(1)}
+        */
